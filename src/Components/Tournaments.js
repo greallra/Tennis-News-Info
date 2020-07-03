@@ -45,7 +45,6 @@ export default class Tournaments extends React.Component {
         .then(r =>this.setState({competitions: r.Ccg, loading: false}))
     }
     toggleDropdown =(i)=>{
-        console.log(i);
         if(!this.state.dropdownOpen) {
             this.setState({dropdownOpen : true, dropdownId : i})
         } else {

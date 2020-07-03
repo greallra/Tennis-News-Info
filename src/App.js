@@ -10,7 +10,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class App extends React.Component {
   state = {
-    activePage: 'Tournaments',
+    activePage: 'News',
     timePassed : 0,
     loading: false,
     error: false,
