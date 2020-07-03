@@ -16,7 +16,7 @@ export default function Articles(props) {
     }
     return (
         <div className="articles-cont">
-            <div className="grid-cont1">
+            <div className="grid-cont1" onClick={()=>{props.handleViewArticle(props.articles[0].id)}}>
                 <div className="grid1-child1">
                     <img src={props.articles[0].img} />
                 </div>

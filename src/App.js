@@ -6,7 +6,7 @@ import {ArticleInView} from './Components/ArticleInView';
 import {fetchArticles, data} from './fetches';
 import Tournaments from './Components/Tournaments';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
+console.log(process.env.REACT_APP_KEY)
 
 class App extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   handleNavEvent = (e)=>{
-    console.log(e.target);
+
     this.setState({
       activePage: e.target.innerHTML
     })
@@ -35,17 +35,12 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({loading: true})
-    // setInterval(()=>{
-    //   console.clear();
-      
-    //     this.setState({timePassed: this.state.timePassed+ 1})
-    // },1000)
+
     //fetch articles
     fetchArticles()
     .then(r=>r.json())
     // data()
     .then(r=>{
-      console.log(r);
       this.setState({ articles: r.arts, loading: false})
     })
     .catch(e=>{

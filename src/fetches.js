@@ -399,11 +399,11 @@ function fetchTournaments(params) {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "livescore6.p.rapidapi.com",
-      "x-rapidapi-key": "73b4193dc8msh6e231e05f654c80p1b0db8jsn0c2a8aa64974"
+      "x-rapidapi-key": process.env.REACT_APP_KEY
     }
   })
 }
-
+console.log()
 
 
 export {fetchArticles, fetchTournaments, data};
